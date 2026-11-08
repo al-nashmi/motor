@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "موتر",
+    "slug": "motor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "sa.motor.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "يحتاج موتر الكاميرا لمسح الفواتير ورمز QR الضريبي",
+        "NSPhotoLibraryUsageDescription": "يحتاج موتر الوصول للصور لاختيار صورة الفاتورة"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1E293B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "sa.motor.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      [
+        "expo-localization",
+        {
+          "supportsRTL": true,
+          "forcesRTL": true
+        }
+      ],
+      "expo-sharing",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "يحتاج موتر الكاميرا لمسح الفواتير ورمز QR الضريبي",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "يحتاج موتر الوصول للصور لاختيار صورة الفاتورة"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#10B981"
+        }
+      ]
+    ],
+    "scheme": "motor",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
